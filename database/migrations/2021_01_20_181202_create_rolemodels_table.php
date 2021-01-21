@@ -18,6 +18,15 @@ class CreateRolemodelsTable extends Migration
             $table->string('role');
             $table->timestamps();
         });
+        // Insert some stuff
+        DB::table('rolemodels')
+        ->insert([
+            ['role'=>'User'],
+            ['role'=>'Admin'],
+            ['role'=>'Super Admin'],
+        ]);
+
+        
     }
 
     /**
